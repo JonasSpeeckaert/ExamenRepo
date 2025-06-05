@@ -10,9 +10,15 @@ jobs:
       id: make_diagram
       uses: githubocto/repo-visualizer@0.7.1
       with:
-         DOWNLOAD_SECRET: ${{ secrets.DOWNLOAD_SECRET }}
+         github_token: ${{ secrets.DOWNLOAD_SECRET }}
          output_file: output-diagram.svg
          artifact_name: my-diagram
+    - name: Get artifact
+      uses: actions/download-artifact@v2
+      with:
+         github_token: ${{ secrets.DOWNLOAD_SECRET }}
+         name: "my-diagram"
+         path: "downloads"
     
 
     

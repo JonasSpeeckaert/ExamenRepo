@@ -14,12 +14,6 @@ jobs:
       with:
         output_file: output-diagram.svg
         artifact_name: my-diagram
-    - name: Get artifact
-      env: 
-         DOWNLOAD_SECRET: ${{ secrets.DOWNLOAD_SECRET }}
-      uses: actions/download-artifact@v2
-      with:
-         name: my-diagram
-         path: /downloads/
+    
 
     

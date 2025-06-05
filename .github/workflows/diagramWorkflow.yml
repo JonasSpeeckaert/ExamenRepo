@@ -9,11 +9,10 @@ jobs:
     - name: Update diagram
       id: make_diagram
       uses: githubocto/repo-visualizer@0.7.1
-      env: 
-         DOWNLOAD_SECRET: ${{ secrets.DOWNLOAD_SECRET }}   
       with:
-        output_file: output-diagram.svg
-        artifact_name: my-diagram
+         DOWNLOAD_SECRET: ${{ secrets.DOWNLOAD_SECRET }}
+         output_file: output-diagram.svg
+         artifact_name: my-diagram
     
 
     
